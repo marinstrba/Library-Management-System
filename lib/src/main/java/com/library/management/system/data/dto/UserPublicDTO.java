@@ -13,4 +13,5 @@ public class UserPublicDTO {
     String name;
     String surname;
     String email;
+    Boolean isActive;
 }

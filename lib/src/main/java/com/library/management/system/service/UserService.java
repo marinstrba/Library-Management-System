@@ -34,8 +34,15 @@ public class UserService {
                     .name(user.getName())
                     .surname(user.getSurname())
                     .email(user.getEmail())
+                    .isActive(true)
                     .build();
         }).collect(Collectors.toList());
+    }
+
+    public User getUserInfo(Integer Id)
+    {
+        User user = new
+        return userRepository.findById(Id);
     }
 
     private static Integer calculateAge(LocalDate birthDate)

@@ -1,12 +1,12 @@
 package com.library.management.system.controllers;
 
 import com.library.management.system.data.dto.*;
+import com.library.management.system.data.entity.User;
 import com.library.management.system.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 
 @RestController
@@ -21,10 +21,15 @@ public class UserController {
         userService.createUserAccount(userRegistrationDTO);
     }
     @GetMapping(value="/users")
-    public List<UserPublicDTO> getAllUsers()
+    public List<UserPublicDTO> getAllUsersInfo()
     {
         return userService.getAllUsers();
     }
-//    @GetMapping(value="/user-info/{id}")
+    @GetMapping(value="/user-info/{id}")
+    public User getUserProfileInfo(@PathVariable Integer Id)
+    {
+        return userService.getUserInfo(Id);
+    }
+
 //    @PostMapping(value="/order")
 }

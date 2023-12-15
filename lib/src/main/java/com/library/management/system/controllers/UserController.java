@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     private final UserService userService;
-
     @PostMapping(value="/create-account")
     public void createUser(@RequestBody UserDTO userDTO)
     {

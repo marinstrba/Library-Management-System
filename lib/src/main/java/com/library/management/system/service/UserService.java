@@ -20,7 +20,7 @@ public class UserService {
         user.setSurname(userDTO.getSurname());
         user.setEmail(userDTO.getEmail());
         user.setAge(calculateAge(userDTO.getBirthday()));
-        user.setBookOrdersList(null);
+        user.setUserCheckOuts(null);
         userRepository.save(user);
     }
 

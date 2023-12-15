@@ -3,6 +3,7 @@ package com.library.management.system.data.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -11,9 +12,10 @@ import java.util.List;
 
 @Data
 @Entity
+@Builder
 @Table(name="libraryUsers")
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
@@ -29,5 +31,4 @@ public class User {
     private Integer age;
     @OneToMany(mappedBy = "user")
     private List<CheckOut> userCheckOuts;
-
 }

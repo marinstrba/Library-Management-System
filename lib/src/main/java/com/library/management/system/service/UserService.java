@@ -15,12 +15,13 @@ public class UserService {
     private final UserRepository userRepository;
     public void createUserAccount(UserDTO userDTO)
     {
-        User user = new User();
-        user.setName(userDTO.getName());
-        user.setSurname(userDTO.getSurname());
-        user.setEmail(userDTO.getEmail());
-        user.setAge(calculateAge(userDTO.getBirthday()));
-        user.setUserCheckOuts(null);
+        User user = User.builder()
+                .name(userDTO.getName())
+                .surname(userDTO.getSurname())
+                .email(userDTO.getEmail())
+                .age(calculateAge(userDTO.getBirthday()))
+                .userCheckOuts(null)
+                .build();
         userRepository.save(user);
     }
 

@@ -13,11 +13,5 @@ public class CheckOutService {
 
     private final CheckOutRepository checkOutRepository;
 
-    public CheckOut getBookOrder(User user)
-    {
-        CheckOut checkOut = new CheckOut();
-
-        return checkOut;
-    }
 
 }

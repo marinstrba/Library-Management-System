@@ -1,7 +1,6 @@
 package com.library.management.system.controllers;
 
 import com.library.management.system.data.dto.*;
-import com.library.management.system.data.entity.CheckOut;
 import com.library.management.system.data.entity.User;
 import com.library.management.system.errors.UserNotFoundException;
 import com.library.management.system.service.CheckOutService;

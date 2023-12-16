@@ -41,8 +41,7 @@ public class UserService {
 
     public User getUserInfo(Integer Id)
     {
-        User user = new
-        return userRepository.findById(Id);
+        return userRepository.findById(Id).orElse(null);
     }
 
     private static Integer calculateAge(LocalDate birthDate)

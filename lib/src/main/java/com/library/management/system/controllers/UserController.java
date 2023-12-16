@@ -3,7 +3,6 @@ package com.library.management.system.controllers;
 import com.library.management.system.data.dto.*;
 import com.library.management.system.data.entity.User;
 import com.library.management.system.errors.UserNotFoundException;
-import com.library.management.system.service.CheckOutService;
 import com.library.management.system.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,7 +15,6 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-    private final CheckOutService checkOutService;
 
     @PostMapping(value = "/create-account")
     @ResponseStatus(HttpStatus.CREATED)

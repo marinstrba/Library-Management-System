@@ -23,7 +23,7 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping(value="/find-books")
+    @GetMapping(value="/find-book")
     public Book findBook(Integer Id)
     {
         Book book = bookService.findBookId(Id);
